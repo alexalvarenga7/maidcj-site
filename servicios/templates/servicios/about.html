@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}MaidCj{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+</head>
+
+
+<body>
+    <header>
+    <nav class="navbar">
+  <div class="logo">
+    <img src="{% static 'img/logo1.png' %}" alt="MaidCj Logo">
+  </div>
+  <button class="menu-toggle">&#9776;</button> <!-- ícono hamburguesa -->
+  <ul class="nav-links">
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'services' %}">Services</a></li>
+    <li><a href="{% url 'about' %}">About Us</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+
+<div class="about-container">
+    <section class="about-hero">
+        <h1>About MaidCj</h1>
+        <p class="lead">Your trusted partner for professional cleaning services</p>
+
+    <div class="about-content">
+        <div class="about-section">
+            <h2>Who We Are</h2>
+            <p>MaidCj is dedicated to providing top-quality cleaning services for residential and commercial spaces. With years of experience, we pride ourselves on reliability and excellence.</p>
+        </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>To deliver professional, eco-friendly cleaning solutions that create healthy and beautiful spaces for our clients.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>Professional and trained staff</li>
+                <li>Eco-friendly cleaning products</li>
+                <li>Affordable pricing</li>
+                <li>24/7 customer support</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Have questions or want to schedule your cleaning? Reach out or follow us here:</p>
+  <ul>
+    <li>Email: <a href="maidcj3@gmail.com ">maidcj@gmail.com</a></li>
+    <li>Instagram: <a href="https://www.instagram.com/maidcj3/" target="_blank">@maidcj</a></li>
+    <li>Taplink: <a href="https://taplink.cc/maidcj" target="_blank">taplink.cc/maidcj</a></li>
+    <li>Phone: <a href="https://api.whatsapp.com/send/?phone=%2B18322169617&text&type=phone_number&app_absent=0" target="_blank">+1 832 216 9617</a></li>
+  </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025 MaidCj. All rights reserved.</p> 
+</footer>
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

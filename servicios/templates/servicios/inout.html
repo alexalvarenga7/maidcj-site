@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}MaidCj{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/regular.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+  <div class="logo">
+    <img src="{% static 'img/logo1.png' %}" alt="MaidCj Logo">
+  </div>
+  <button class="menu-toggle">&#9776;</button> <!-- ícono hamburguesa -->
+  <ul class="nav-links">
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'services' %}">Services</a></li>
+    <li><a href="{% url 'about' %}">About Us</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <h1>Moving In/Out Cleaning</h1>
+  <p style="text-align:center; font-style:italic;">
+    Moving out can be stressful, but cleaning doesn’t have to be. 
+    Our Move Out Cleaning service ensures your old home is spotless and ready for its next chapter.
+  </p>
+
+  <section>
+    <h2>General Cleaning</h2>
+    <ul>
+      <li>Ceiling Fan(s) (within reach)</li>
+      <li>Air Vents</li>
+      <li>Light Fixtures</li>
+      <li>Outlet Covers / Switch Plates</li>
+      <li>Wall Scuffs (within reach)</li>
+      <li>Windows: all glass, framing, and ledges</li>
+      <li>Dust blinds</li>
+      <li>Doors: all surfaces, frames, and knobs</li>
+      <li>Closets: door tracks, shelving, and floors</li>
+      <li>Scrub baseboards</li>
+      <li>Sweep, vacuum (if carpet), and mop all floors</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Bathroom(s) General</h2>
+    <ul>
+      <li>All Cabinets: interior and exterior (within reach)</li>
+      <li>All Drawers: interior and exterior</li>
+      <li>Sink</li>
+      <li>Faucet</li>
+      <li>Counter</li>
+      <li>Toilet</li>
+      <li>Exhaust Vent</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Bathtub / Shower</h2>
+    <ul>
+      <li>Enclosure / Surround Tiles / Fixtures</li>
+      <li>Shower Rod / Door</li>
+      <li>Faucets / Controls</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kitchen General</h2>
+    <ul>
+      <li>All Cabinets: interior and exterior (within reach)</li>
+      <li>All Drawers: interior and exterior</li>
+      <li>Stovetop / Splash Guards / Backsplash</li>
+      <li>Sink</li>
+      <li>Faucet</li>
+      <li>Counter(s)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Fridge Cleaning Checklist</h2>
+    <ul>
+      <li>Full Interior: kickplate, shelving, bars</li>
+      <li>Remove & clean ice tray from freezer</li>
+      <li>Exterior clean: sides, above (within reach)</li>
+      <li>Polish steel (if applicable)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Microwave</h2>
+    <ul>
+      <li>Interior</li>
+      <li>Exterior clean</li>
+      <li>Polish steel (if applicable)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Oven / Range</h2>
+    <ul>
+      <li>Full inside clean</li>
+      <li>Broiler / Drawer</li>
+      <li>Drip Pans</li>
+      <li>Exterior clean</li>
+      <li>Polish steel (if applicable)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Dishwasher</h2>
+    <ul>
+      <li>Tub interior / Soap dispenser</li>
+      <li>Exterior controls / Exterior surface</li>
+      <li>Polish steel (if applicable)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Exterior (if applicable)</h2>
+    <ul>
+      <li>Sweep balcony / patio / garage</li>
+      <li>Sweep storage area</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Laundry Room (if applicable)</h2>
+    <ul>
+      <li>Washer: interior tub and lid</li>
+      <li>Dryer: interior tub, lid, and lint trap</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Before Leaving</h2>
+    <ul>
+      <li>Close all blinds</li>
+      <li>Adjust thermostat to the temperature upon entry</li>
+      <li>Turn off all lights</li>
+      <li>Walk through unit to confirm task completion</li>
+      <li>Lock all doors and windows</li>
+      <li>Take out trash (2 bags included)</li>
+    </ul>
+  </section>
+
+  <section class="not-included">
+    <h2>🚫 Not Included (Full 'Make-Ready' Items)</h2>
+    <ul>
+      <li>Repairs, Painting, Damaged Carpet</li>
+      <li>Rust and Stain Treatment</li>
+      <li>Mold and Mildew Removal</li>
+      <li>Cleaning Human or Animal Bodily Fluids</li>
+      <li>Cleaning Exterior Windows, Power Washing Exterior</li>
+      <li>Disposal of Large Items or Excessive Trash</li>
+      <li>Cleaning Fireplaces</li>
+    </ul>
+  </section>
+
+
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MaidCj. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

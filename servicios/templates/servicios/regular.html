@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}MaidCj{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/regular.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+  <div class="logo">
+    <img src="{% static 'img/logo1.png' %}" alt="MaidCj Logo">
+  </div>
+  <button class="menu-toggle">&#9776;</button> <!-- ícono hamburguesa -->
+  <ul class="nav-links">
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'services' %}">Services</a></li>
+    <li><a href="{% url 'about' %}">About Us</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <h1>Regular Cleaning</h1>
+
+  <section>
+    <h2>General Cleaning</h2>
+    <ul>
+      <li>Dust furniture</li>
+      <li>Dust large electronics (e.g. TV)</li>
+      <li>Dust lamps</li>
+      <li>Dust light switches</li>
+      <li>Sweep or vacuum floors</li>
+      <li>Empty wastebaskets</li>
+      <li>Mop floors (if appropriate)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Bedroom(s)</h2>
+    <ul>
+      <li>Make beds</li>
+      <li>Change bed linens (if provided)</li>
+      <li>Dust headboard</li>
+      <li>Dust lamps</li>
+      <li>Dust light switches</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Bathroom(s)</h2>
+    <ul>
+      <li>Mirror</li>
+      <li>Sink</li>
+      <li>Faucet</li>
+      <li>Counters</li>
+      <li>Toilet</li>
+      <li>Bathtub / Shower</li>
+      <li>Enclosure / Surround Tiles / Floors</li>
+      <li>Shower Rod / Door</li>
+      <li>Faucets / Controls</li>
+      <li>Towel bars</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kitchen</h2>
+    <ul>
+      <li>Counters</li>
+      <li>Sink</li>
+      <li>Faucet</li>
+      <li>Stovetop / Splash Guards / Backsplash</li>
+      <li>Load the dishwasher (if already empty)</li>
+      <li>Microwave (Interior & Exterior)</li>
+      <li>Oven / Range (Exterior)</li>
+      <li>Fridge (Exterior)</li>
+      <li>Dishwasher (Exterior)</li>
+      <li>Other Small Appliances (Exterior)</li>
+      <li>Cabinets (Exterior)</li>
+    </ul>
+  </section>
+
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MaidCj. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

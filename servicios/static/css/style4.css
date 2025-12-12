@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: rgb(255, 255, 255);
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d2e4ff;
+    padding: 1rem 2rem;
+    height: 60px;
+    position: relative;
+}
+
+.logo img {
+    height: 220px;
+    width: auto;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    padding: 6rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+footer {
+    background: #cbe0ff;
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: #333;
+}
+
+.descripcion {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background: #d2e4ff;
+        width: 180px;
+        padding: 1rem 0;
+        display: none;
+        z-index: 999;
+        border: 1px solid #aac7ff;
+    }
+
+    .nav-links a {
+        padding: 12px 20px;
+        display: block;
+        color: #000;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}

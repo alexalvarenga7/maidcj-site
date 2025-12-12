@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}MaidCj{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/regular.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+  <div class="logo">
+    <img src="{% static 'img/logo1.png' %}" alt="MaidCj Logo">
+  </div>
+  <button class="menu-toggle">&#9776;</button> <!-- ícono hamburguesa -->
+  <ul class="nav-links">
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'services' %}">Services</a></li>
+    <li><a href="{% url 'about' %}">About Us</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+
+<section>
+    <h2>Commercial Cleaning</h2>
+    <ul>
+    <p>  Basic cleaning of the following areas:</p>
+    <ul>
+      <li>Offices</li>
+      <li>Stores</li>
+      <li>Restaurants</li>
+      <li>Warehouses</li>
+      <li>Common Areas</li>  
+      <li>Surface Cleaning ✓ Dust and Construction Cleaning</li>
+      <li>Window and Glass Trashes / Fragments Removal</li>
+      <li>Kitchen and Bathroom Cleaning</li>
+      <li>Cleaning of Basic Fixtures</li>
+    </ul>
+    </section>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 MaidCj. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

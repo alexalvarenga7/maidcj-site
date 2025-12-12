@@ -1,0 +1,108 @@
+<!DOCTYPE>
+<html lang="es">
+<head>      
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}MaidCj - Services{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+  <div class="logo">
+    <img src="{% static 'img/logo1.png' %}" alt="MaidCj Logo">
+  </div>
+  <button class="menu-toggle">&#9776;</button> <!-- ícono hamburguesa -->
+  <ul class="nav-links">
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'services' %}">Services</a></li>
+    <li><a href="{% url 'about' %}">About Us</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+</nav>
+    </header>
+    <main>
+        <p class="titulo">Our Cleaning Services</p>
+        <p class="subtitulo">What We Do</p>
+        <p class="descripcion">
+            Experience unparalleled cleaning services from our maid CJ Agents. 
+            Whether <br>it’s your residence, commercial space, or a post-construction site,
+            rest <br>assured that you’ll receive top-quality service. 
+</p>
+
+    <section class="services-section">
+  <div class="services-grid">
+    
+    <div class="service-card">
+      <img src="{% static 'img/regular.jpg' %}" alt="Limpieza Regular">
+      <h3>Maid CJ Regular<br> Cleaning
+</h3>
+      <p>maid CJ Regular Cleaning keeps frequently used and accessible areas clean,
+        <br>perfect for maintaining a fresh, organized home or condo.
+</p>
+      <a href="{% url 'Regular' %}" class="service-button">Learn More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'img/limpieza.jpg' %}" alt="Limpieza General">
+      <h3>Post-Construction Cleaning
+      </h3>
+      <p>Our post-construction service specializes in cleaning newly built or renovated properties.
+        <br>We remove all construction debris, and dust, ensuring your space is ready. 
+</p>
+      <a href="{% url 'Construction' %}" class="service-button">Learn More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'img/premium.jpg' %}" alt="Limpieza Premium">
+      <h3>Maid CJ Premium Cleaning
+</h3>
+      <p>Maid CJ Premium cleaning delivers top-quality cleaning for homes and businesses, 
+        <br>leaving every space fresh, sparkling and welcoming.</p>
+      <a href="{% url 'pre' %}" class="service-button">Learn More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'img/comercial.jpg' %}" alt="Limpieza Comercial">
+      <h3>Maid CJ Commercial Cleaning. 
+</h3>
+      <p>Our commercial cleaning services are designed for offices, stores and gyms. 
+        <br>We ensure a clean, hygienic and professional.
+</p>
+      <a href="{% url 'comercial' %}" class="service-button">Learn More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'img/move.jpg' %}" alt="Limpieza in out">
+      <h3>Moving In/Out.
+ 
+</h3>
+      <p>Maid CJ – moving in and out cleaning made easy. 
+        <br>We leave your old home spotless and your new home sparkling, so you can focus on the next chapter.
+
+</p>
+      <a href="{% url 'inout' %}" class="service-button">Learn More</a>
+    </div>
+
+  </div>
+</section>   
+
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 MaidCj. All rights reserved.</p>
+    </footer>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+</body>
+</html>
