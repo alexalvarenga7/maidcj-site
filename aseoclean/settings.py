@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['maidcj-site.onrender.com']
 
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
