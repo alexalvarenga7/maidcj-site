@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['maidcj-site.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django_distill'
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
